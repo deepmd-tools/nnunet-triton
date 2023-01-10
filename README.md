@@ -172,7 +172,7 @@ cd DeepLearningExamples/PyTorch/Segmentation/nnUNet
 This command will use the Dockerfile to create a Docker image named `nnunet`, downloading all the required components automatically.
 
 ```
-docker build -t nnunet .
+docker build -t anilyerramasunnunet-triton .
 ```
  
 The NGC container contains all the components optimized for usage on NVIDIA hardware.
@@ -183,7 +183,7 @@ The following command will launch the container and mount the `./data` directory
  
 ```
 mkdir data results
-docker run -it --privileged --runtime=nvidia --shm-size=8g --ulimit memlock=-1 --ulimit stack=67108864 --rm -v ${PWD}/data:/data -v ${PWD}/results:/results nnunet:latest /bin/bash
+docker run -it --privileged --runtime=nvidia --shm-size=8g --ulimit memlock=-1 --ulimit stack=67108864 --rm -v ${PWD}/data:/data -v ${PWD}/results:/results anilyerramasunnunet-triton /bin/bash
 ```
 
 4. Prepare the BraTS dataset.
